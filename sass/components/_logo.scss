@@ -1,23 +1,30 @@
 .logo-web {
-  display: inline-block;
-  // margin-right: 0;
+  @extend %logo;
+  padding: 16px 0;
 
-  color: $accent;
-  font-family: $sec-font-family;
-  font-weight: $bold-font-weight;
-  font-size: 26px;
-  line-height: 1.19;
-}
+  @media screen and (min-width: $tablet) {
+    padding: 26px;
+  }
 
-.footer__logo-web {
-  @extend .logo-web;
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-right: 0;
+  @media screen and (min-width: $desktop) {
+    padding: 25px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-studio {
-  @include logo-colorizing(#000000);
+  @include logo-colorizing($black-color);
+}
+
+.footer__logo-web {
+  @extend %logo;
+  display: block;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__logo-studio {

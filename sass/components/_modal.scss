@@ -27,7 +27,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  @extend .container-flex;
+  // @extend .container-flex;
   @extend %centering;
   width: 30px;
   height: 30px;

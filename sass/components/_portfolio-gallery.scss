@@ -1,5 +1,5 @@
 .gallery {
-  @extend .container-flex;
+  // @extend .container-flex;
   flex-wrap: wrap;
   margin: -15px;
 
@@ -29,7 +29,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    @extend .container-flex;
+    // @extend .container-flex;
     @extend %centering;
     padding: 59px 24px 63px 24px;
 

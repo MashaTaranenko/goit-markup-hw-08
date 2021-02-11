@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
@@ -12,13 +12,13 @@
 
 <body>
     <header class="header">
-        <div class="page-header">
+        <div class="container-header">
             <nav class="header__nav">
                 <a class="logo-web" href="index.html">Web<span class="logo-studio">Studio</span>
                 </a>
                 <button type="button" class="header-button"
                 data-header-button
-                aria-controls="header__nav-menu"
+                aria-controls="mob-nav"
                 aria-expanded="false">
                     <svg width="40" height="40" 
                     aria-label="Переключатель мобильного меню"
@@ -28,10 +28,43 @@
                     </svg>
                 </button>
 
-                <div class="header__nav-menu" id="header__nav-menu" data-menu>
-                Контент Меню
+                <div class="mob-nav" id="mob-nav" data-menu>
+                    <ul class="mob-nav__list">
+                        <li class="mob-nav__item"><a class="mob-nav__link--current" href="./index.html">Студия</a></li>
+                        <li class="mob-nav__item"><a class="mob-nav__link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="mob-nav__item"><a class="mob-nav__link" href="#">Контакты</a></li>
+                    </ul>
+                    
+                    <div class="mob-nav__contacts">
+                        <ul class="mob-nav__contacts-list">
+                            <li class="mob-nav__contacts-link">
+                                <a class="mob-nav__contacts-tel" href="tel:380961111111">
+                                    +38 096 111 11 11</a>
+                            </li>
+                            <li class="mob-nav__contacts-link">
+                                <a class="mob-nav__contacts-mail" href="mailto:info@devstudio.com">
+                                    info@devstudio.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mob-nav__socials">
+                        <ul class="mob-nav__socials-list">
+                            <li class="mob-nav__socials-item">
+                                <a href="" class="mob-nav__socials-link">Instagram</a>
+                            </li>
+                            <li class="mob-nav__socials-item">
+                                <a href="" class="mob-nav__socials-link">Twitter</a>
+                            </li>
+                            <li class="mob-nav__socials-item">
+                                <a href="" class="mob-nav__socials-link">Facebook</a>
+                            </li>
+                            <li class="mob-nav__socials-item">
+                                <a href="" class="mob-nav__socials-link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-        
                 <ul class="site-nav">
                     <li class="site-nav__item"><a class="site-nav__link--current" href="./index.html">Студия</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
@@ -57,9 +90,9 @@
     <main>
     <section class="hero">
         <div class="overlay">
-        <div class="hero__container">
+        <div class="container-hero">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-            <button class="button" data-modal-open>Заказать услугу</button>
+            <button class="hero__button" data-modal-open>Заказать услугу</button>
         </div>
         </div>
     </section>

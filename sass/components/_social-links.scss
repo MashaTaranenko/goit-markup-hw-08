@@ -11,7 +11,7 @@
   }
 
   &__link {
-    @extend .container-flex;
+    // @extend .container-flex;
     @extend %centering;
     width: 44px;
     height: 44px;
@@ -60,7 +60,7 @@
   }
 
   &__social-links {
-    @extend .container-flex;
+    // @extend .container-flex;
     @extend .social-links;
     margin-bottom: 0;
   }

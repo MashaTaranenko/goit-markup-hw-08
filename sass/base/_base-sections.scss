@@ -1,10 +1,8 @@
 .container {
-  margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
+  margin-right: auto;
   padding-left: 15px;
-
-  outline: 1px solid tomato;
+  padding-right: 15px;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -17,15 +15,35 @@
   @media screen and (nin-width: 1200px) {
     width: 1200px;
   }
+
+  &-header {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-hero {
+    @extend .container;
+    padding: 118px 60px;
+
+    @media screen and (min-width: 768px) {
+      padding: 118px 0;
+      width: 360px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 200px 0;
+      width: 696px;
+    }
+  }
 }
 
 .section {
   padding-top: 60px;
-  padding-bottom: 60px;
 
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
-    padding-bottom: 94px;
   }
 }
 

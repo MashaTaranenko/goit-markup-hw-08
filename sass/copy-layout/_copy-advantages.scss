@@ -3,7 +3,7 @@
 }
 
 .advantages {
-  @extend %container-flex;
+  // @extend %container-flex;
 
   &__item {
     width: 270px;
@@ -16,7 +16,7 @@
   &__bar {
     padding: 25px 100px;
     margin-bottom: 30px;
-    border-radius: 4px;
+    border-radius: $border-radius-btn;
     background: $light-background;
   }
 

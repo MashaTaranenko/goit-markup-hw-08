@@ -1,5 +1,5 @@
 .social-links {
-  @extend %container-flex;
+  // @extend %container-flex;
   justify-content: center;
   margin-bottom: 30px;
 
@@ -11,7 +11,7 @@
   }
 
   &__link {
-    @extend %container-flex;
+    // @extend %container-flex;
     @extend %centering;
     width: 44px;
     height: 44px;
