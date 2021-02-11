@@ -1,0 +1,38 @@
+.section-business {
+  @extend .section;
+  padding-top: 0;
+}
+
+.business {
+  margin-top: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__service {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $main-white-color;
+    @extend .container-flex;
+    @extend %centering;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: $bold-font-weight;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__nav {
+    @extend %container-flex;
+    align-items: center;
+  }
+}
+
+.page-header {
+  @extend .container;
+  @extend %container-flex;
+  align-items: center;
+}

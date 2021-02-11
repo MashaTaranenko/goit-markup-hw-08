@@ -1,0 +1,67 @@
+.social-links {
+  @extend %container-flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__item {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @extend %container-flex;
+    @extend %centering;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $main-white-color;
+    color: $social-link-color;
+
+    @include animation(color, background-color);
+  }
+
+  &__icon {
+    fill: currentColor;
+    @include animation(fill);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent;
+    color: $main-white-color;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: $main-white-color;
+  }
+
+  &__link--bgcolored {
+    @extend .social-links__link;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $main-white-color;
+
+    @include animation(background-color);
+  }
+}
+
+.join-us {
+  margin-top: 12px;
+
+  &__lable {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: $bold-font-weight;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $main-white-color;
+  }
+
+  &__social-links {
+    @extend %container-flex;
+    @extend .social-links;
+    margin-bottom: 0;
+  }
+}

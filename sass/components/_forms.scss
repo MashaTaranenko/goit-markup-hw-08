@@ -1,0 +1,67 @@
+.subscribe {
+  margin-top: 12px;
+  margin-left: auto;
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: $bold-font-weight;
+    color: $main-white-color;
+    text-transform: uppercase;
+  }
+
+  &__thub {
+    @extend .container-flex;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    @include animation(border);
+  }
+
+  &__input:focus {
+    border: 1px solid $accent;
+    outline: none;
+  }
+
+  &__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: currentColor;
+
+    @include animation(fill, background, box-shadow);
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    background-color: $main-white-color;
+    color: $accent;
+  }
+}
+
+.subscribe__btn {
+  @extend %button;
+  box-shadow: $btn-shadow;
+
+  &:hover,
+  &:focus {
+    @extend %button-hover;
+  }
+}

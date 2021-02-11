@@ -1,0 +1,37 @@
+.clients {
+  @extend .container-flex;
+  @extend %centering;
+  margin-top: 50px;
+
+  &__list {
+    width: 170px;
+    height: 90px;
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__name {
+    @extend .container-flex;
+    @extend %centering;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid $social-link-color;
+    color: $social-link-color;
+
+    @include animation(color, border);
+  }
+
+  &__name:hover,
+  &__name:focus {
+    color: $accent;
+    border: 1px solid $accent;
+  }
+
+  &__icon {
+    fill: currentColor;
+    @include animation(fill);
+  }
+}

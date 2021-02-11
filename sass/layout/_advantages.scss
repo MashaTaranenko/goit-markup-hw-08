@@ -1,0 +1,36 @@
+.section__title--hidden {
+  @extend %visually-hidden;
+}
+
+.advantages {
+  @extend .container;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__item {
+    width: 100%;
+  }
+
+  &__bar {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background: $light-background;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: $bold-font-weight;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-dark-color;
+  }
+
+  &__label {
+    margin: 0;
+    line-height: 1.71;
+  }
+}
