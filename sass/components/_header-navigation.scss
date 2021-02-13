@@ -1,51 +1,3 @@
-.site-nav {
-  // @extend .container-flex;
-
-  &__link {
-    position: relative;
-
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $main-dark-color;
-
-    @include animation(color);
-  }
-
-  &__item {
-    position: relative;
-  }
-
-  &__link--current {
-    @extend .site-nav__link;
-    color: $accent;
-  }
-
-  &__link--current::after {
-    content: '';
-
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: $accent;
-    border-radius: 2px;
-  }
-
-  &__link:hover,
-  &__link:focus {
-    color: $accent;
-    outline: transparent;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-
 .site-nav,
 .auth-nav {
   font-weight: 500;
@@ -54,16 +6,91 @@
   letter-spacing: 0.02em;
 }
 
-.auth-nav {
-  // @extend .container-flex;
-  margin-left: auto;
+.site-nav {
+  display: none;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 0;
+    margin-left: 88px;
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 93px;
+    }
   }
+}
+.site-nav__link {
+  display: none;
 
-  &__link {
-    // @extend .container-flex;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $main-dark-color;
+    @include animation(color);
+
+    &:hover,
+    &:focus {
+      color: $accent;
+      outline: transparent;
+    }
+
+    &--current {
+      position: relative;
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      color: $accent;
+    }
+
+    &--current::after {
+      content: '';
+
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent;
+      border-radius: 2px;
+    }
+  }
+}
+
+.auth-nav {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    // align-items: center;
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.auth-nav__link {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -72,8 +99,8 @@
     @include animation(color);
   }
 
-  &__link:hover,
-  &__link:focus {
+  &:hover,
+  &:focus {
     color: $accent;
   }
 

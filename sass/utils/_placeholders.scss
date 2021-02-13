@@ -62,3 +62,12 @@
   background-color: $main-white-color;
   color: $accent;
 }
+
+%label__name {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $second-dark-color;
+}

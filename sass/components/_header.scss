@@ -13,16 +13,4 @@
 .header__nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  // @extend %centering;
-}
-
-.site-nav {
-  display: none;
-  // display: flex;
-  @extend %centering;
-}
-
-.auth-nav {
-  display: none;
 }

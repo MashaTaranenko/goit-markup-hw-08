@@ -12,7 +12,7 @@
 
     &.is-open {
       display: block;
-      overflow-y: scroll;
+      // overflow-y: scroll;
     }
   }
 
@@ -60,9 +60,13 @@
   }
 
   &__contacts-tel {
-    font-size: 34px;
+    font-size: 28px;
     color: $main-dark-color;
     @include animation(color);
+
+    @media screen and (min-width: 480px) {
+      font-size: 34px;
+    }
   }
   &__contacts-tel:hover,
   &__contacts-tel:focus {

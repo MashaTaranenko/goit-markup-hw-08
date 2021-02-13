@@ -9,6 +9,10 @@ body {
   color: $second-dark-color;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 svg {
   display: block;
 }

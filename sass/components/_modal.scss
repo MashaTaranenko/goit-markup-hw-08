@@ -1,23 +1,39 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-right: auto;
+  margin-left: auto;
   padding: 40px;
-
-  width: 528px;
-  min-height: 581px;
   background-color: $main-white-color;
+  transform: scale(1);
+  @include animation(transform);
+  // opacity: 1;
+  .backdrop.is-hidden .modal {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    transform: translate(-50%, -50%) scale(1);
+    @include animation(transform);
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1, 2);
+    // opacity: 0;
+  }
 
-  transform: translate(-50%, -50%) rotate(360deg);
-
-  transition: transform $time-animation $timing-function;
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    // min-height: 581px;
+  }
 
   &__title {
     margin: 0;
     margin-bottom: 12px;
     font-weight: $bold-font-weight;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: $main-dark-color;
   }
@@ -27,7 +43,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  // @extend .container-flex;
+  @extend .container-flex;
   @extend %centering;
   width: 30px;
   height: 30px;
@@ -40,7 +56,7 @@
 
 .close-icon {
   fill: currentColor;
-  transition: fill $time-animation $timing-function;
+  @include animation(fill);
 }
 
 .close-btn:hover .close-icon {
