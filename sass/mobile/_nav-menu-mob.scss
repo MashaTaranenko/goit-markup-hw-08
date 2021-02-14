@@ -7,12 +7,15 @@
     left: 0;
     padding: 48px 40px 48px 40px;
     width: 100%;
+    min-height: 100vh;
+    height: 100%;
     background-color: $main-white-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     &.is-open {
-      display: block;
-      // overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
@@ -21,11 +24,12 @@
   }
 
   &__list {
-    margin-bottom: 302px;
-    font-size: 40px;
+    font-size: 30px;
+    // margin-bottom: 150px;
 
-    @media screen and (max-width: 360px) {
-      margin-bottom: 170px;
+    @media screen and (max-width: 400px) {
+      font-size: 25px;
+      // margin-bottom: 90px;
     }
   }
 
@@ -39,7 +43,7 @@
 
   &__item:not(:last-child),
   &__contacts-link:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
   }
 
   &__link {
@@ -56,12 +60,12 @@
   }
 
   &__contacts-list {
-    margin-bottom: 64px;
+    // margin-bottom: 35px;
   }
 
   &__contacts-tel {
-    font-size: 28px;
-    color: $main-dark-color;
+    font-size: 25px;
+    color: $accent;
     @include animation(color);
 
     @media screen and (min-width: 480px) {
@@ -69,12 +73,14 @@
     }
   }
   &__contacts-tel:hover,
-  &__contacts-tel:focus {
-    color: $accent;
+  &__contacts-tel:focus,
+  &__contacts-mail:hover,
+  &__contacts-mail:focus {
+    color: rgb(255, 166, 0);
   }
 
   &__contacts-mail {
-    font-size: 24px;
+    font-size: 20px;
     color: $second-dark-color;
   }
 

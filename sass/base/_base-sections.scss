@@ -15,6 +15,14 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
+
+  &-header {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &-hero {
     @extend .container;
     padding: 118px 60px;

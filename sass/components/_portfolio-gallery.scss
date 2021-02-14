@@ -1,21 +1,47 @@
 .gallery {
-  // @extend .container-flex;
-  flex-wrap: wrap;
-  margin: -15px;
-
-  &__item {
-    width: 370px;
-    margin: 15px;
-    background: #ffffff;
-
-    @include animation(box-shadow);
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
 
-  &__item:hover,
-  &__item:focus {
+  &__item {
+    @include animation(box-shadow);
+    @include bordered($card-border-color);
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 90px) / 3);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      display: block;
+      box-shadow: $btn-shadow;
+      outline: none;
+    }
+  }
+
+  &__link {
     display: block;
-    box-shadow: $btn-shadow;
-    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+    @include animation(box-shadow);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      outline: transparent;
+    }
   }
 
   &__thumb {
@@ -27,37 +53,46 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: 100%;
     left: 0;
-    // @extend .container-flex;
-    @extend %centering;
-    padding: 59px 24px 63px 24px;
 
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+    transform: translateY(0);
 
-    transition-property: transform;
-    transition-duration: $time-animation;
-    transition-timing-function: $timing-function;
+    @include animation(transform);
   }
 
   &__item:hover &__overlay,
   &__item:focus-within &__overlay {
-    transform: translateY(0);
+    transform: translateY(-100%);
   }
 
-  &__overlay-text {
+  &__content {
+    padding: 77px 24px;
     margin: 0;
+    width: 100%;
+    height: 100%;
     font-size: 18px;
+    font-weight: 400;
     line-height: 1.56;
     color: $main-white-color;
+
+    @media screen and (max-width: 479px) {
+      font-size: 16;
+      padding: 16px 24px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 64px 24px;
+    }
   }
 
   &__box {
     padding: 20px 24px;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
   }
 
   &__title {
@@ -71,10 +106,11 @@
   }
 
   &__description {
-    margin: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.88;
-    letter-spacing: 0.03em;
     color: $second-dark-color;
   }
 }

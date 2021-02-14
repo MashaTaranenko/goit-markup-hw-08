@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  border-bottom: 1px solid #ececec;
 }
 
 .container-header {
@@ -15,9 +16,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   min-height: 60px;
 
   @media screen and (min-width: 768px) {
     min-height: 60px;
+    width: 0;
   }
 }

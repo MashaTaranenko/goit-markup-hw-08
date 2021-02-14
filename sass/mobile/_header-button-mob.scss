@@ -4,7 +4,7 @@
   z-index: 1;
 
   padding: 0;
-  margin-right: auto;
+  margin-left: auto;
   border: none;
   background-color: transparent;
   color: $black-color;
@@ -13,12 +13,16 @@
 
   &:hover,
   &:focus {
-    fill: $accent;
+    color: $accent;
   }
 
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.header-icon {
+  fill: currentColor;
 }
 
 .header-button .icon-cross {
