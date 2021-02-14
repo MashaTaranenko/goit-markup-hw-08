@@ -12,17 +12,9 @@
     width: 768px;
   }
 
-  @media screen and (nin-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 1200px;
   }
-
-  &-header {
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
-    }
-  }
-
   &-hero {
     @extend .container;
     padding: 118px 60px;
@@ -37,13 +29,25 @@
       width: 696px;
     }
   }
+
+  &-footer {
+    @extend .container;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+  }
 }
 
 .section {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -53,10 +57,17 @@
 
 .section__title {
   margin: 0;
+  margin-bottom: 30px;
   font-weight: $bold-font-weight;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: $main-dark-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

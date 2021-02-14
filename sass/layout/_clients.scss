@@ -1,19 +1,28 @@
 .clients {
-  // @extend .container-flex;
-  @extend %centering;
-  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 
-  &__list {
-    width: 170px;
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
     height: 90px;
   }
 
-  &__list:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 90px) / 3);
   }
 
-  &__name {
-    @extend .container-flex;
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 180px) / 6);
+  }
+
+  &__link {
+    display: flex;
     @extend %centering;
     width: 100%;
     height: 100%;
@@ -24,8 +33,8 @@
     @include animation(color, border);
   }
 
-  &__name:hover,
-  &__name:focus {
+  &__link:hover,
+  &__link:focus {
     color: $accent;
     border: 1px solid $accent;
   }

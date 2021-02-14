@@ -38,7 +38,7 @@
 }
 
 %button {
-  @extend .container-flex;
+  display: flex;
   @extend %centering;
   margin-left: auto;
   margin-right: auto;
@@ -70,4 +70,14 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $second-dark-color;
+}
+
+%footer-label {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  font-size: 14;
+  font-weight: $bold-font-weight;
+  color: $main-white-color;
+  text-transform: uppercase;
 }
