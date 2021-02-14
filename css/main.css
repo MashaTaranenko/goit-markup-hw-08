@@ -1497,20 +1497,8 @@ img {
     left: 50%;
     width: 450px;
     opacity: 1;
-    -webkit-transform: translate(-50%, -25%) scale(1);
-            transform: translate(-50%, -25%) scale(1);
-    -webkit-transition-property: opacity, -webkit-transform;
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
-    -webkit-transition-duration: 300ms;
-            transition-duration: 300ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal .backdrop.is-hidden .modal {
-    -webkit-transform: translate(-50%, -25%) scale(1.2);
-            transform: translate(-50%, -25%) scale(1.2);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     -webkit-transition-property: opacity, -webkit-transform;
     transition-property: opacity, -webkit-transform;
     transition-property: transform, opacity;
@@ -1526,9 +1514,12 @@ img {
   .modal {
     width: 528px;
   }
-  .modal .backdrop.is-hidden .modal {
-    -webkit-transform: translate(-50%, -25%) scale(1.2);
-            transform: translate(-50%, -25%) scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
     -webkit-transition-property: opacity, -webkit-transform;
     transition-property: opacity, -webkit-transform;
     transition-property: transform, opacity;
@@ -2247,7 +2238,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 48px 40px 48px 40px;
+    padding: 48px 40px 48px;
     width: 100%;
     min-height: 100vh;
     height: 100%;
@@ -2266,6 +2257,18 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 550px) {
+  .mob-nav {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 767px) {
+  .mob-nav {
+    padding-left: 100px;
   }
 }
 

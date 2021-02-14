@@ -23,31 +23,36 @@
     left: 50%;
     width: 450px;
     opacity: 1;
-    transform: translate(-50%, -25%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     @include animation(transform, opacity);
-
-    .backdrop.is-hidden .modal {
-      transform: translate(-50%, -25%) scale(1.2);
-      @include animation(transform, opacity);
-    }
   }
+
   @media screen and (min-width: $desktop) {
     width: 528px;
+  }
+}
+.backdrop.is-hidden .modal {
+  @media screen and (min-width: $tablet) {
+    transform: translate(-50%, -50%) scale(1.2);
+    @include animation(transform, opacity);
+  }
+}
+// @media screen and (min-width: $desktop) {
+//   width: 528px;
 
-    .backdrop.is-hidden .modal {
-      transform: translate(-50%, -25%) scale(1.2);
-      @include animation(transform, opacity);
-    }
-  }
-  &__title {
-    margin: 0;
-    margin-bottom: 12px;
-    font-weight: $bold-font-weight;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    color: $main-dark-color;
-  }
+//   // .backdrop.is-hidden .modal {
+//   //   transform: translate(-50%, -25%) scale(1.2);
+//   //   @include animation(transform, opacity);
+//   // }
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: $bold-font-weight;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: $main-dark-color;
 }
 
 .close-btn {
